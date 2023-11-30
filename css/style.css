@@ -100,6 +100,17 @@
     color: var(--primary);
 }
 
+.do-flex{
+    height:100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.course-item{
+    height:100%;
+    display:flex;
+    flex-direction: column;
+}
 @media (max-width: 991.98px) {
     .navbar-light .navbar-nav .nav-link  {
         margin-right: 0;
