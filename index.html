@@ -1,572 +1,1167 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>ecOSmart</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <meta content="" name="keywords" />
+        <meta content="" name="description" />
 
-<head>
-    <meta charset="utf-8">
-    <title>ecOSmart</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon" />
 
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
+            rel="stylesheet"
+        />
 
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+        <!-- Icon Font Stylesheet -->
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+            rel="stylesheet"
+        />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+            rel="stylesheet"
+        />
 
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+        <!-- Libraries Stylesheet -->
+        <link href="lib/animate/animate.min.css" rel="stylesheet" />
+        <link
+            href="lib/owlcarousel/assets/owl.carousel.min.css"
+            rel="stylesheet"
+        />
 
-    <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet" />
 
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet" />
 
-    <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
-</head>
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="img/favicon/apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="img/favicon/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="img/favicon/favicon-16x16.png"
+        />
+        <link rel="manifest" href="img/favicon/site.webmanifest" />
+    </head>
 
-<body>
-    <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-            <span class="sr-only">Loading...</span>
+    <body>
+        <!-- Spinner Start -->
+        <div
+            id="spinner"
+            class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+        >
+            <div
+                class="spinner-border text-primary"
+                style="width: 3rem; height: 3rem"
+                role="status"
+            >
+                <span class="sr-only">Loading...</span>
+            </div>
         </div>
-    </div>
-    <!-- Spinner End -->
+        <!-- Spinner End -->
 
+        <!-- Navbar Start -->
+        <nav
+            class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0"
+        >
+            <a
+                href="index.html"
+                class="navbar-brand d-flex align-items-center px-4 px-lg-5"
+            >
+                <h2 class="m-0 text-primary">
+                    <i class="fa fa-book me-3"></i>ecOSmart
+                </h2>
+            </a>
+            <button
+                type="button"
+                class="navbar-toggler me-4"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarCollapse"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto p-4 p-lg-0">
+                    <a href="index.html" class="nav-item nav-link active"
+                        >Home</a
+                    >
 
-    <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
-        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>ecOSmart</h2>
-        </a>
-        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link active">Home</a>
-
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                    <div class="dropdown-menu fade-down m-0">
-                        <a href="energy.html" class="dropdown-item">Зелена енергетика</a>
-                        <a href="health.html" class="dropdown-item">Електронне здоров'я</a>
-                        <a href="transport.html" class="dropdown-item">Розумний транспорт</a>
-                        <a href="buildings.html" class="dropdown-item">Розумні будівлі</a>
-                        <a href="security.html" class="dropdown-item">Безпека і приватність</a>
-                        <a href="contact.html" class="dropdown-item">Електронне урядування</a>
+                    <div class="nav-item dropdown">
+                        <a
+                            href="#"
+                            class="nav-link dropdown-toggle"
+                            data-bs-toggle="dropdown"
+                            >Pages</a
+                        >
+                        <div class="dropdown-menu fade-down m-0">
+                            <a href="energy.html" class="dropdown-item"
+                                >Зелена енергетика</a
+                            >
+                            <a href="health.html" class="dropdown-item"
+                                >Електронне здоров'я</a
+                            >
+                            <a href="transport.html" class="dropdown-item"
+                                >Розумний транспорт</a
+                            >
+                            <a href="buildings.html" class="dropdown-item"
+                                >Розумні будівлі</a
+                            >
+                            <a href="security.html" class="dropdown-item"
+                                >Безпека і приватність</a
+                            >
+                            <a href="contact.html" class="dropdown-item"
+                                >Електронне урядування</a
+                            >
+                        </div>
                     </div>
                 </div>
-
+                <a
+                    href="energy.html"
+                    class="btn btn-primary py-4 px-lg-5 d-none d-lg-block"
+                    >Next page<i class="fa fa-arrow-right ms-3"></i
+                ></a>
             </div>
-            <a href="energy.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Next page<i class="fa fa-arrow-right ms-3"></i></a>
-        </div>
-    </nav>
-    <!-- Navbar End -->
+        </nav>
+        <!-- Navbar End -->
 
-
-    <!-- Carousel Start -->
-    <div class="container-fluid p-0 mb-5" id="carousel">
-        <div class="owl-carousel header-carousel position-relative">
-            <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="img/carousel-1.jpg" alt="" >
-                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(24, 29, 56, .7);">
-                    <div class="container">
-                        <div class="row justify-content-start">
-                            <div class="col-sm-10 col-lg-8">
-                                <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Smart cities</h5>
-                                <h1 class="display-3 text-white animated slideInDown">Розумне місто, мудре завтра: </h1>
-                                <p class="fs-5 text-white mb-4 pb-2">інновації, зручність, екологія – технології для гармонійного життя!</p>
-                                <a href="#service" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
-
+        <!-- Carousel Start -->
+        <div class="container-fluid p-0 mb-5" id="carousel">
+            <div class="owl-carousel header-carousel position-relative">
+                <div class="owl-carousel-item position-relative">
+                    <img class="img-fluid" src="img/carousel-1.jpg" alt="" />
+                    <div
+                        class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
+                        style="background: rgba(24, 29, 56, 0.7)"
+                    >
+                        <div class="container">
+                            <div class="row justify-content-start">
+                                <div class="col-sm-10 col-lg-8">
+                                    <h5
+                                        class="text-primary text-uppercase mb-3 animated slideInDown"
+                                    >
+                                        Smart cities
+                                    </h5>
+                                    <h1
+                                        class="display-3 text-white animated slideInDown"
+                                    >
+                                        Розумне місто, мудре завтра:
+                                    </h1>
+                                    <p class="fs-5 text-white mb-4 pb-2">
+                                        інновації, зручність, екологія –
+                                        технології для гармонійного життя!
+                                    </p>
+                                    <a
+                                        href="#service"
+                                        class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft"
+                                        >Read More</a
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="owl-carousel-item position-relative">
+                    <img class="img-fluid" src="img/carousel-2.jpg" alt="" />
+                    <div
+                        class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
+                        style="background: rgba(24, 29, 56, 0.7)"
+                    >
+                        <div class="container">
+                            <div class="row justify-content-start">
+                                <div class="col-sm-10 col-lg-8">
+                                    <h5
+                                        class="text-primary text-uppercase mb-3 animated slideInDown"
+                                    >
+                                        Smart cities
+                                    </h5>
+                                    <h1
+                                        class="display-3 text-white animated slideInDown"
+                                    >
+                                        Вперед до майбутнього:
+                                    </h1>
+                                    <p class="fs-5 text-white mb-4 pb-2">
+                                        розумні технології, найкращі міста.
+                                        Перетворюймо ідеї в інновації!
+                                    </p>
+                                    <a
+                                        href="#service"
+                                        class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft"
+                                        >Read More</a
+                                    >
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="img/carousel-2.jpg" alt="">
-                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(24, 29, 56, .7);">
-                    <div class="container">
-                        <div class="row justify-content-start">
-                            <div class="col-sm-10 col-lg-8">
-                                <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Smart cities</h5>
-                                <h1 class="display-3 text-white animated slideInDown">Вперед до майбутнього: </h1>
-                                <p class="fs-5 text-white mb-4 pb-2">розумні технології, найкращі міста. Перетворюймо ідеї в інновації!</p>
-                                <a href="#service" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
+        </div>
+        <!-- Carousel End -->
 
+        <!-- Service Start -->
+        <div class="container-xxl py-5" id="service">
+            <div class="container">
+                <div class="row g-4">
+                    <div
+                        class="col-lg-3 col-sm-6 wow fadeInUp"
+                        data-wow-delay="0.1s"
+                    >
+                        <div class="service-item text-center pt-3">
+                            <div class="p-4">
+                                <i
+                                    class="fa fa-3x fa-graduation-cap text-primary mb-4"
+                                ></i>
+                                <h5 class="mb-3">Освітні інновації</h5>
+                                <p>
+                                    Впровадження новаторських методів навчання,
+                                    застосування онлайн-курсів, відкритих
+                                    лекцій, віртуальних екскурсій.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="col-lg-3 col-sm-6 wow fadeInUp"
+                        data-wow-delay="0.3s"
+                    >
+                        <div class="service-item text-center pt-3">
+                            <div class="p-4">
+                                <i
+                                    class="fa fa-3x fa-globe text-primary mb-4"
+                                ></i>
+                                <h5 class="mb-3">Розумна безпека</h5>
+                                <p>
+                                    Підхід до забезпечення безпеки громадян,
+                                    інфраструктури та даних в контексті
+                                    використання технологій для оптимізації
+                                    функціонування міста.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="col-lg-3 col-sm-6 wow fadeInUp"
+                        data-wow-delay="0.5s"
+                    >
+                        <div class="service-item text-center pt-3">
+                            <div class="p-4">
+                                <i
+                                    class="fa fa-3x fa-home text-primary mb-4"
+                                ></i>
+                                <h5 class="mb-3">Розумні будівлі</h5>
+                                <p>
+                                    Використання розумних систем керування
+                                    будівлями для забезпечення комфорту,
+                                    ефективного використання енергії та безпеки
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="col-lg-3 col-sm-6 wow fadeInUp"
+                        data-wow-delay="0.7s"
+                    >
+                        <div class="service-item text-center pt-3">
+                            <div class="p-4">
+                                <i
+                                    class="fa fa-3x fa-book-open text-primary mb-4"
+                                ></i>
+                                <h5 class="mb-3">Електронне урядування</h5>
+                                <p>
+                                    Впровадження інтернет-платформ та мобільних
+                                    додатків для зручного взаємодії з місцевим
+                                    урядом та доступу до послуг.
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Carousel End -->
+        <!-- Service End -->
 
+        <!-- About Start -->
+        <div class="container-xxl py-5" id="about">
+            <div class="container">
+                <div class="row g-5">
+                    <div
+                        class="col-lg-6 wow fadeInUp"
+                        data-wow-delay="0.1s"
+                        style="min-height: 400px"
+                    >
+                        <div class="position-relative h-100">
+                            <img
+                                class="img-fluid position-absolute w-100 h-100"
+                                src="img/about.jpg"
+                                alt=""
+                                style="object-fit: cover"
+                            />
+                        </div>
+                    </div>
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <h6
+                            class="section-title bg-white text-start text-primary pe-3"
+                        >
+                            Головне
+                        </h6>
+                        <h1 class="mb-4">Досліди розумні міста з нами!</h1>
+                        <p class="mb-4">
+                            Розумні міста – це інноваційні території, де
+                            високотехнологічні рішення впроваджуються для
+                            поліпшення якості життя мешканців. Охоплюючи широкий
+                            спектр сфер, від транспорту та енергетики до
+                            комунікацій та управління ресурсами, розумні міста
+                            використовують дані та інтернет-технології для
+                            оптимізації інфраструктури та послуг.
+                        </p>
+                        <p class="mb-4">
+                            Розумні міста прагнуть до створення стійкого,
+                            зручного та ефективного середовища для своїх
+                            жителів, використовуючи інновації для вирішення
+                            сучасних викликів. Вони є лабораторіями ідей та
+                            практичними прикладами того, як технології можуть
+                            перетворити містське простір та сприяти сталому
+                            розвитку.
+                        </p>
+                        <div class="row gy-2 gx-4 mb-4">
+                            <div class="col-sm-6">
+                                <p class="mb-0">
+                                    <i
+                                        class="fa fa-arrow-right text-primary me-2"
+                                    ></i
+                                    >Сталість
+                                </p>
+                            </div>
+                            <div class="col-sm-6">
+                                <p class="mb-0">
+                                    <i
+                                        class="fa fa-arrow-right text-primary me-2"
+                                    ></i
+                                    >Інтелектуальність
+                                </p>
+                            </div>
+                            <div class="col-sm-6">
+                                <p class="mb-0">
+                                    <i
+                                        class="fa fa-arrow-right text-primary me-2"
+                                    ></i
+                                    >Доступність
+                                </p>
+                            </div>
+                            <div class="col-sm-6">
+                                <p class="mb-0">
+                                    <i
+                                        class="fa fa-arrow-right text-primary me-2"
+                                    ></i
+                                    >Ефектиність
+                                </p>
+                            </div>
+                            <div class="col-sm-6">
+                                <p class="mb-0">
+                                    <i
+                                        class="fa fa-arrow-right text-primary me-2"
+                                    ></i
+                                    >Інклюзивність
+                                </p>
+                            </div>
+                            <div class="col-sm-6">
+                                <p class="mb-0">
+                                    <i
+                                        class="fa fa-arrow-right text-primary me-2"
+                                    ></i
+                                    >Безпека
+                                </p>
+                            </div>
+                        </div>
+                        <a
+                            class="btn btn-primary py-3 px-5 mt-2"
+                            href="#technology"
+                            >Read More</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
 
-    <!-- Service Start -->
-    <div class="container-xxl py-5" id="service">
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item text-center pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-graduation-cap text-primary mb-4"></i>
-                            <h5 class="mb-3">Освітні інновації</h5>
-                            <p>Впровадження новаторських методів навчання, застосування онлайн-курсів, відкритих лекцій, віртуальних екскурсій.</p>
+        <!-- Testimonial Start -->
+        <div
+            class="container-xxl py-5 wow fadeInUp"
+            data-wow-delay="0.1s"
+            id="technology"
+        >
+            <div class="container">
+                <div class="text-center">
+                    <h6
+                        class="section-title bg-white text-center text-primary px-3"
+                    >
+                        Technologies
+                    </h6>
+                    <h1>Розумні технології</h1>
+                    <h6 class="mb-5">(продовження)</h6>
+                </div>
+                <div
+                    class="owl-carousel testimonial-carousel position-relative"
+                >
+                    <div class="testimonial-item text-center">
+                        <img
+                            class="border rounded-circle p-2 mx-auto mb-3"
+                            src="img/bulb.png"
+                            style="width: 80px; height: 80px"
+                        />
+                        <h5 class="mb-0">Розумне освітлення</h5>
+                        <p>tech</p>
+                        <div class="testimonial-text bg-light text-center p-4">
+                            <p class="mb-0">
+                                Системи розумного освітлення включають в себе
+                                використання датчиків, які регулюють яскравість
+                                освітлення в залежності від погоди, часу доби та
+                                руху пішоходів. Це не тільки зберігає енергію,
+                                але і підвищує безпеку на вулицях.
+                            </p>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item text-center pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-globe text-primary mb-4"></i>
-                            <h5 class="mb-3">Розумна безпека</h5>
-                            <p>Підхід до забезпечення безпеки громадян, інфраструктури та даних в контексті використання технологій для оптимізації функціонування міста. </p>
+                    <div class="testimonial-item text-center">
+                        <img
+                            class="border rounded-circle p-2 mx-auto mb-3"
+                            src="img/trash.png"
+                            style="width: 80px; height: 80px"
+                        />
+                        <h5 class="mb-0">Смітникові системи</h5>
+                        <p>tech</p>
+                        <div class="testimonial-text bg-light text-center p-4">
+                            <p class="mb-0">
+                                Розумні системи управління відходами, які
+                                дозволяють ефективніше збирати та утилізувати
+                                сміття.
+                            </p>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item text-center pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-home text-primary mb-4"></i>
-                            <h5 class="mb-3">Розумні будівлі</h5>
-                            <p>Використання розумних систем керування будівлями для забезпечення комфорту, ефективного використання енергії та безпеки</p>
+                    <div class="testimonial-item text-center">
+                        <img
+                            class="border rounded-circle p-2 mx-auto mb-3"
+                            src="img/transport.png"
+                            style="width: 80px; height: 80px"
+                        />
+                        <h5 class="mb-0">Розумний транспорт</h5>
+                        <p>tech</p>
+                        <div class="testimonial-text bg-light text-center p-4">
+                            <p class="mb-0">
+                                Впровадження систем управління рухом, які
+                                допомагають зменшити затори та підвищити безпеку
+                                на дорогах. Це може включати в себе
+                                інтелектуальні системи керування світлофорами та
+                                розумний громадський транспорт.
+                            </p>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="service-item text-center pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-book-open text-primary mb-4"></i>
-                            <h5 class="mb-3">Електронне урядування</h5>
-                            <p>Впровадження інтернет-платформ та мобільних додатків для зручного взаємодії з місцевим урядом та доступу до послуг.</p>
+                    <div class="testimonial-item text-center">
+                        <img
+                            class="border rounded-circle p-2 mx-auto mb-3"
+                            src="img/health.png"
+                            style="width: 80px; height: 80px"
+                        />
+                        <h5 class="mb-0">Електронна охорона здоров'я</h5>
+                        <p>tech</p>
+                        <div class="testimonial-text bg-light text-center p-4">
+                            <p class="mb-0">
+                                Використання телемедицини та інших розумних
+                                рішень для покращення доступу до медичної
+                                допомоги та моніторингу здоров'я.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="testimonial-item text-center">
+                        <img
+                            class="border rounded-circle p-2 mx-auto mb-3"
+                            src="img/ecology.png"
+                            style="width: 80px; height: 80px"
+                        />
+                        <h5 class="mb-0">Збереження екології</h5>
+                        <p>tech</p>
+                        <div class="testimonial-text bg-light text-center p-4">
+                            <p class="mb-0">
+                                Впровадження систем енергозбереження в будівлях,
+                                використання відновлюваної енергії та моніторинг
+                                витрат енергії.Використання сенсорів для
+                                моніторингу якості повітря та води для
+                                попередження забруднення та захисту здоров'я
+                                населення.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="testimonial-item text-center">
+                        <img
+                            class="border rounded-circle p-2 mx-auto mb-3"
+                            src="img/water.png"
+                            style="width: 80px; height: 80px"
+                        />
+                        <h5 class="mb-0">Розумне управління водопостачанням</h5>
+                        <p>tech</p>
+                        <div class="testimonial-text bg-light text-center p-4">
+                            <p class="mb-0">
+                                Впровадження систем моніторингу та контролю над
+                                водопостачанням та стоками для зменшення втрат
+                                та покращення ефективності.
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Service End -->
+        <!-- Testimonial End -->
 
-
-    <!-- About Start -->
-    <div class="container-xxl py-5" id="about">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
-                    <div class="position-relative h-100">
-                        <img class="img-fluid position-absolute w-100 h-100" src="img/about.jpg" alt="" style="object-fit: cover;">
-                    </div>
+        <!-- Categories Start -->
+        <div class="container-xxl py-5 category" id="cities">
+            <div class="container">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h6
+                        class="section-title bg-white text-center text-primary px-3"
+                    >
+                        World
+                    </h6>
+                    <h1 class="mb-5">Розумні міста</h1>
                 </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <h6 class="section-title bg-white text-start text-primary pe-3">Головне</h6>
-                    <h1 class="mb-4">Досліди розумні міста з нами!</h1>
-                    <p class="mb-4">Розумні міста – це інноваційні території, де високотехнологічні рішення впроваджуються для поліпшення якості життя мешканців. Охоплюючи широкий спектр сфер, від транспорту та енергетики до комунікацій та управління ресурсами, розумні міста використовують дані та інтернет-технології для оптимізації інфраструктури та послуг.</p>
-                    <p class="mb-4">Розумні міста прагнуть до створення стійкого, зручного та ефективного середовища для своїх жителів, використовуючи інновації для вирішення сучасних викликів. Вони є лабораторіями ідей та практичними прикладами того, як технології можуть перетворити містське простір та сприяти сталому розвитку.
-
-                    </p>
-                    <div class="row gy-2 gx-4 mb-4">
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Сталість</p>
-                        </div>
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Інтелектуальність</p>
-                        </div>
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Доступність</p>
-                        </div>
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Ефектиність</p>
-                        </div>
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Інклюзивність</p>
-                        </div>
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Безпека</p>
+                <div class="row g-3">
+                    <div class="col-lg-7 col-md-6">
+                        <div class="row g-3">
+                            <div
+                                class="col-lg-12 col-md-12 wow zoomIn"
+                                data-wow-delay="0.1s"
+                            >
+                                <a
+                                    class="position-relative d-block overflow-hidden"
+                                    href="https://www.beesmart.city/city-portraits/copenhagen"
+                                    target="_blank"
+                                >
+                                    <img
+                                        class="img-fluid"
+                                        src="img/Kopengagen.jpg"
+                                        alt=""
+                                    />
+                                    <div
+                                        class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3"
+                                        style="margin: 1px"
+                                    >
+                                        <h5 class="m-0">Копенгаґен</h5>
+                                        <small class="text-primary"
+                                            >Данія</small
+                                        >
+                                    </div>
+                                </a>
+                            </div>
+                            <div
+                                class="col-lg-6 col-md-12 wow zoomIn"
+                                data-wow-delay="0.3s"
+                            >
+                                <a
+                                    class="position-relative d-block overflow-hidden"
+                                    href="https://www.beesmart.city/city-portraits/smart-city-portrait-amsterdam"
+                                    target="_blank"
+                                >
+                                    <img
+                                        class="img-fluid"
+                                        src="img/Amsterdam.jpg"
+                                        alt=""
+                                    />
+                                    <div
+                                        class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3"
+                                        style="margin: 1px"
+                                    >
+                                        <h5 class="m-0">Амстердам</h5>
+                                        <small class="text-primary"
+                                            >Нідерланди</small
+                                        >
+                                    </div>
+                                </a>
+                            </div>
+                            <div
+                                class="col-lg-6 col-md-12 wow zoomIn"
+                                data-wow-delay="0.5s"
+                            >
+                                <a
+                                    class="position-relative d-block overflow-hidden"
+                                    href="https://smart-cre.com/what-makes-barcelona-a-smart-city-6-brilliant-strategies/"
+                                    target="_blank"
+                                >
+                                    <img
+                                        class="img-fluid"
+                                        src="img/Barcelona.jpg"
+                                        alt=""
+                                    />
+                                    <div
+                                        class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3"
+                                        style="margin: 1px"
+                                    >
+                                        <h5 class="m-0">Барселона</h5>
+                                        <small class="text-primary"
+                                            >Іспанія</small
+                                        >
+                                    </div>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <a class="btn btn-primary py-3 px-5 mt-2" href="#technology">Read More</a>
+                    <div
+                        class="col-lg-5 col-md-6 wow zoomIn"
+                        data-wow-delay="0.7s"
+                        style="min-height: 350px"
+                    >
+                        <a
+                            class="position-relative d-block h-100 overflow-hidden"
+                            href="https://www.thalesgroup.com/en/worldwide-digital-identity-and-security/iot/magazine/singapore-worlds-smartest-city"
+                            target="_blank"
+                        >
+                            <img
+                                class="img-fluid position-absolute w-100 h-100"
+                                src="img/Singapur.jpg"
+                                alt=""
+                                style="object-fit: cover"
+                            />
+                            <div
+                                class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3"
+                                style="margin: 1px"
+                            >
+                                <h5 class="m-0">Сінґапур</h5>
+                                <small class="text-primary">Сінґапур</small>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- About End -->
+        <!-- Categories Start -->
 
-    <!-- Testimonial Start -->
-    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s" id="technology">
-        <div class="container">
-            <div class="text-center">
-                <h6 class="section-title bg-white text-center text-primary px-3">Technologies</h6>
-                <h1 >Розумні технології</h1>
-                <h6 class="mb-5">(продовження)</h6>
-            </div>
-            <div class="owl-carousel testimonial-carousel position-relative">
-                <div class="testimonial-item text-center">
-                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/bulb.png" style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Розумне освітлення</h5>
-                    <p>tech</p>
-                    <div class="testimonial-text bg-light text-center p-4">
-                        <p class="mb-0">Системи розумного освітлення включають в себе використання датчиків, які регулюють яскравість освітлення в залежності від погоди, часу доби та руху пішоходів. Це не тільки зберігає енергію, але і підвищує безпеку на вулицях.</p>
-                    </div>
+        <!-- Courses Start -->
+        <div class="container-xxl py-5" id="cources">
+            <div class="container">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h6
+                        class="section-title bg-white text-center text-primary px-3"
+                    >
+                        Courses
+                    </h6>
+                    <h1>Вивчай розумні міста</h1>
+                    <h4 class="mb-5">Онлайн курси</h4>
                 </div>
-                <div class="testimonial-item text-center">
-                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/trash.png" style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Смітникові системи</h5>
-                    <p>tech</p>
-                    <div class="testimonial-text bg-light text-center p-4">
-                        <p class="mb-0">Розумні системи управління відходами, які дозволяють ефективніше збирати та утилізувати сміття.</p>
+                <div class="row g-4 justify-content-center">
+                    <div
+                        class="col-lg-4 col-md-6 wow fadeInUp"
+                        data-wow-delay="0.1s"
+                    >
+                        <div class="course-item bg-light">
+                            <div class="position-relative overflow-hidden">
+                                <img
+                                    class="img-fluid"
+                                    src="img/course-1.jpg"
+                                    alt=""
+                                />
+                                <div
+                                    class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4"
+                                >
+                                    <a
+                                        href="https://www.coursera.org/learn/digital-democracy#syllabus"
+                                        target="_blank"
+                                        class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end"
+                                        style="border-radius: 30px 0 0 30px"
+                                        >Read More</a
+                                    >
+                                    <a
+                                        href="https://www.coursera.org/learn/digital-democracy#syllabus"
+                                        target="_blank"
+                                        class="flex-shrink-0 btn btn-sm btn-primary px-3"
+                                        style="border-radius: 0 30px 30px 0"
+                                        >Join Now</a
+                                    >
+                                </div>
+                            </div>
+                            <div class="do-flex">
+                                <div class="text-center p-4 pb-0">
+                                    <h3 class="mb-0">$0.00</h3>
+                                    <div class="mb-3">
+                                        <small
+                                            class="fa fa-star text-primary"
+                                        ></small>
+                                        <small
+                                            class="fa fa-star text-primary"
+                                        ></small>
+                                        <small
+                                            class="fa fa-star text-primary"
+                                        ></small>
+                                        <small
+                                            class="fa fa-star text-primary"
+                                        ></small>
+                                        <small
+                                            class="fa fa-star text-primary"
+                                        ></small>
+                                        <small>(123)</small>
+                                    </div>
+                                    <h5 class="mb-4">
+                                        Securing Digital Democracy
+                                    </h5>
+                                </div>
+                                <div class="d-flex border-top">
+                                    <small
+                                        class="flex-fill text-center border-end py-2"
+                                        ><i
+                                            class="fa fa-user-tie text-primary me-2"
+                                        ></i
+                                        >Unaversity of Michigan</small
+                                    >
+                                    <small
+                                        class="flex-fill text-center border-end py-2"
+                                        ><i
+                                            class="fa fa-clock text-primary me-2"
+                                        ></i
+                                        >14 Hrs</small
+                                    >
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="testimonial-item text-center">
-                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/transport.png" style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Розумний транспорт</h5>
-                    <p>tech</p>
-                    <div class="testimonial-text bg-light text-center p-4">
-                        <p class="mb-0">Впровадження систем управління рухом, які допомагають зменшити затори та підвищити безпеку на дорогах. Це може включати в себе інтелектуальні системи керування світлофорами та розумний громадський транспорт.</p>
+                    <div
+                        class="col-lg-4 col-md-6 wow fadeInUp"
+                        data-wow-delay="0.3s"
+                    >
+                        <div class="course-item bg-light">
+                            <div class="position-relative overflow-hidden">
+                                <img
+                                    class="img-fluid"
+                                    src="img/course-2.jpg"
+                                    alt=""
+                                />
+                                <div
+                                    class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4"
+                                >
+                                    <a
+                                        href="https://www.coursera.org/learn/reclaiming-the-street"
+                                        target="_blank"
+                                        class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end"
+                                        style="border-radius: 30px 0 0 30px"
+                                        >Read More</a
+                                    >
+                                    <a
+                                        href="https://www.coursera.org/learn/reclaiming-the-street"
+                                        target="_blank"
+                                        class="flex-shrink-0 btn btn-sm btn-primary px-3"
+                                        style="border-radius: 0 30px 30px 0"
+                                        >Join Now</a
+                                    >
+                                </div>
+                            </div>
+                            <div class="do-flex">
+                                <div class="text-center p-4 pb-0">
+                                    <h3 class="mb-0">$0.00</h3>
+                                    <div class="mb-3">
+                                        <small
+                                            class="fa fa-star text-primary"
+                                        ></small>
+                                        <small
+                                            class="fa fa-star text-primary"
+                                        ></small>
+                                        <small
+                                            class="fa fa-star text-primary"
+                                        ></small>
+                                        <small
+                                            class="fa fa-star text-primary"
+                                        ></small>
+                                        <small
+                                            class="fa fa-star text-primary"
+                                        ></small>
+                                        <small>(123)</small>
+                                    </div>
+                                    <h5 class="mb-4">
+                                        Reclaiming the Street for Livable Urban
+                                        Spaces
+                                    </h5>
+                                </div>
+                                <div class="d-flex border-top">
+                                    <small
+                                        class="flex-fill text-center border-end py-2"
+                                        ><i
+                                            class="fa fa-user-tie text-primary me-2"
+                                        ></i
+                                        >University of Amsterdam</small
+                                    >
+                                    <small
+                                        class="flex-fill text-center border-end py-2"
+                                        ><i
+                                            class="fa fa-clock text-primary me-2"
+                                        ></i
+                                        >19 Hrs</small
+                                    >
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="testimonial-item text-center">
-                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/health.png" style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Електронна охорона здоров'я</h5>
-                    <p>tech</p>
-                    <div class="testimonial-text bg-light text-center p-4">
-                        <p class="mb-0">Використання телемедицини та інших розумних рішень для покращення доступу до медичної допомоги та моніторингу здоров'я.</p>
-                    </div>
-                </div>
-                <div class="testimonial-item text-center">
-                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/ecology.png" style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Збереження екології</h5>
-                    <p>tech</p>
-                    <div class="testimonial-text bg-light text-center p-4">
-                        <p class="mb-0">Впровадження систем енергозбереження в будівлях, використання відновлюваної енергії та моніторинг витрат енергії.Використання сенсорів для моніторингу якості повітря та води для попередження забруднення та захисту здоров'я населення.</p>
-                    </div>
-                </div>
-                <div class="testimonial-item text-center">
-                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/water.png" style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Розумне управління водопостачанням</h5>
-                    <p>tech</p>
-                    <div class="testimonial-text bg-light text-center p-4">
-                        <p class="mb-0">Впровадження систем моніторингу та контролю над водопостачанням та стоками для зменшення втрат та покращення ефективності.</p>
+                    <div
+                        class="col-lg-4 col-md-6 wow fadeInUp"
+                        data-wow-delay="0.5s"
+                    >
+                        <div class="course-item bg-light">
+                            <div class="position-relative overflow-hidden">
+                                <img
+                                    class="img-fluid"
+                                    src="img/course-3.jpg"
+                                    alt=""
+                                />
+                                <div
+                                    class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4"
+                                >
+                                    <a
+                                        href="https://www.coursera.org/learn/renewable-energy-entrepreneurship#syllabus"
+                                        target="_blank"
+                                        class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end"
+                                        style="border-radius: 30px 0 0 30px"
+                                        >Read More</a
+                                    >
+                                    <a
+                                        href="https://www.coursera.org/learn/renewable-energy-entrepreneurship#syllabus"
+                                        target="_blank"
+                                        class="flex-shrink-0 btn btn-sm btn-primary px-3"
+                                        style="border-radius: 0 30px 30px 0"
+                                        >Join Now</a
+                                    >
+                                </div>
+                            </div>
+                            <div class="do-flex">
+                                <div class="text-center p-4 pb-0">
+                                    <h3 class="mb-0">$0.00</h3>
+                                    <div class="mb-3">
+                                        <small
+                                            class="fa fa-star text-primary"
+                                        ></small>
+                                        <small
+                                            class="fa fa-star text-primary"
+                                        ></small>
+                                        <small
+                                            class="fa fa-star text-primary"
+                                        ></small>
+                                        <small
+                                            class="fa fa-star text-primary"
+                                        ></small>
+                                        <small
+                                            class="fa fa-star text-primary"
+                                        ></small>
+                                        <small>(123)</small>
+                                    </div>
+                                    <h5 class="mb-4">
+                                        Renewable Energy and Green Building
+                                        Entrepreneurship
+                                    </h5>
+                                </div>
+                                <div class="d-flex border-top">
+                                    <small
+                                        class="flex-fill text-center border-end py-2"
+                                        ><i
+                                            class="fa fa-user-tie text-primary me-2"
+                                        ></i
+                                        >Duke University</small
+                                    >
+                                    <small
+                                        class="flex-fill text-center border-end py-2"
+                                        ><i
+                                            class="fa fa-clock text-primary me-2"
+                                        ></i
+                                        >17 Hrs</small
+                                    >
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Testimonial End -->
+        <!-- Courses End -->
 
-    <!-- Categories Start -->
-    <div class="container-xxl py-5 category" id="cities">
-        <div class="container">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">World</h6>
-                <h1 class="mb-5">Розумні міста</h1>
-            </div>
-            <div class="row g-3">
-                <div class="col-lg-7 col-md-6">
-                    <div class="row g-3">
-                        <div class="col-lg-12 col-md-12 wow zoomIn" data-wow-delay="0.1s">
-                            <a class="position-relative d-block overflow-hidden" href="https://www.beesmart.city/city-portraits/copenhagen" target="_blank">
-                                <img class="img-fluid" src="img/Kopengagen.jpg" alt="">
-                                <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
-                                    <h5 class="m-0">Копенгаґен</h5>
-                                    <small class="text-primary">Данія</small>
+        <!-- Team Start -->
+        <div class="container-xxl py-5" id="team">
+            <div class="container">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h6
+                        class="section-title bg-white text-center text-primary px-3"
+                    >
+                        Team
+                    </h6>
+                    <h1 class="mb-5">Розробники</h1>
+                </div>
+                <div class="row g-4 dev">
+                    <div
+                        class="col-lg-3 col-md-6 wow fadeInUp"
+                        data-wow-delay="0.3s"
+                    >
+                        <div class="team-item bg-light">
+                            <div class="overflow-hidden">
+                                <img
+                                    class="img-fluid"
+                                    src="img/oksana.jpg"
+                                    alt=""
+                                />
+                            </div>
+                            <div
+                                class="position-relative d-flex justify-content-center"
+                                style="margin-top: -23px"
+                            >
+                                <div
+                                    class="bg-light d-flex justify-content-center pt-2 px-1"
+                                >
+                                    <a
+                                        class="btn btn-sm-square btn-primary mx-1"
+                                        href="https://www.instagram.com/oksana.hordych/"
+                                        target="_blank"
+                                    >
+                                        <span
+                                            ><img
+                                                src="./img/instagram.png"
+                                                alt=""
+                                                width="25"
+                                        /></span>
+                                    </a>
+                                    <a
+                                        class="btn btn-sm-square btn-primary mx-1"
+                                        href="https://github.com/sana23ok"
+                                        target="_blank"
+                                    >
+                                        <span
+                                            ><img
+                                                src="./img/github.png"
+                                                alt=""
+                                                width="25"
+                                        /></span>
+                                    </a>
+                                    <a
+                                        class="btn btn-sm-square btn-primary mx-1"
+                                        href="https://www.linkedin.com/in/oksana-hordych-7380ba290/"
+                                        target="_blank"
+                                    >
+                                        <span
+                                            ><img
+                                                src="./img/linkedin.png"
+                                                alt=""
+                                                width="25"
+                                        /></span>
+                                    </a>
                                 </div>
-                            </a>
+                            </div>
+                            <div class="text-center p-4">
+                                <h5 class="mb-0">Гордич Оксана</h5>
+                                <small>Розробник</small>
+                            </div>
                         </div>
-                        <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
-                            <a class="position-relative d-block overflow-hidden" href="https://www.beesmart.city/city-portraits/smart-city-portrait-amsterdam" target="_blank">
-                                <img class="img-fluid" src="img/Amsterdam.jpg" alt="">
-                                <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
-                                    <h5 class="m-0">Амстердам</h5>
-                                    <small class="text-primary">Нідерланди</small>
+                    </div>
+                    <div
+                        class="col-lg-3 col-md-6 wow fadeInUp"
+                        data-wow-delay="0.5s"
+                    >
+                        <div class="team-item bg-light">
+                            <div class="overflow-hidden">
+                                <img
+                                    class="img-fluid"
+                                    src="img/dima.jpg"
+                                    alt=""
+                                />
+                            </div>
+                            <div
+                                class="position-relative d-flex justify-content-center"
+                                style="margin-top: -23px"
+                            >
+                                <div
+                                    class="bg-light d-flex justify-content-center pt-2 px-1"
+                                >
+                                    <a
+                                        class="btn btn-sm-square btn-primary mx-1"
+                                        href="https://www.instagram.com/dima.holiaka/"
+                                        target="_blank"
+                                    >
+                                        <span
+                                            ><img
+                                                src="./img/instagram.png"
+                                                alt=""
+                                                width="25"
+                                        /></span>
+                                    </a>
+                                    <a
+                                        class="btn btn-sm-square btn-primary mx-1"
+                                        href="https://github.com/HoliakaDmytro"
+                                        target="_blank"
+                                    >
+                                        <span
+                                            ><img
+                                                src="./img/github.png"
+                                                alt=""
+                                                width="25"
+                                        /></span>
+                                    </a>
+                                    <a
+                                        class="btn btn-sm-square btn-primary mx-1"
+                                        href="https://github.com/HoliakaDmytro"
+                                        target="_blank"
+                                    >
+                                        <span
+                                            ><img
+                                                src="./img/linkedin.png"
+                                                alt=""
+                                                width="25"
+                                        /></span>
+                                    </a>
                                 </div>
-                            </a>
+                            </div>
+                            <div class="text-center p-4">
+                                <h5 class="mb-0">Голяка Дмитро</h5>
+                                <small>Розробник</small>
+                            </div>
                         </div>
-                        <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.5s">
-                            <a class="position-relative d-block overflow-hidden" href="https://smart-cre.com/what-makes-barcelona-a-smart-city-6-brilliant-strategies/" target="_blank">
-                                <img class="img-fluid" src="img/Barcelona.jpg" alt="">
-                                <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
-                                    <h5 class="m-0">Барселона</h5>
-                                    <small class="text-primary">Іспанія</small>
+                    </div>
+                    <div
+                        class="col-lg-3 col-md-6 wow fadeInUp"
+                        data-wow-delay="0.7s"
+                    >
+                        <div class="team-item bg-light">
+                            <div class="overflow-hidden">
+                                <img
+                                    class="img-fluid"
+                                    src="img/sofiia.jpg"
+                                    alt=""
+                                />
+                            </div>
+                            <div
+                                class="position-relative d-flex justify-content-center"
+                                style="margin-top: -23px"
+                            >
+                                <div
+                                    class="bg-light d-flex justify-content-center pt-2 px-1"
+                                >
+                                    <a
+                                        class="btn btn-sm-square btn-primary mx-1"
+                                        href="https://www.instagram.com/sofiiakovall/"
+                                        target="_blank"
+                                    >
+                                        <span
+                                            ><img
+                                                src="./img/instagram.png"
+                                                alt=""
+                                                width="25"
+                                        /></span>
+                                    </a>
+                                    <a
+                                        class="btn btn-sm-square btn-primary mx-1"
+                                        href="https://github.com/kovalsofiia1"
+                                        target="_blank"
+                                    >
+                                        <span
+                                            ><img
+                                                src="./img/github.png"
+                                                alt=""
+                                                width="25"
+                                        /></span>
+                                    </a>
+                                    <a
+                                        class="btn btn-sm-square btn-primary mx-1"
+                                        href="https://www.linkedin.com/in/sofiia-koval-19151b296/"
+                                        target="_blank"
+                                    >
+                                        <span
+                                            ><img
+                                                src="./img/linkedin.png"
+                                                alt=""
+                                                width="25"
+                                        /></span>
+                                    </a>
                                 </div>
-                            </a>
+                            </div>
+                            <div class="text-center p-4">
+                                <h5 class="mb-0">Коваль Софія</h5>
+                                <small>Розробник</small>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-5 col-md-6 wow zoomIn" data-wow-delay="0.7s" style="min-height: 350px;">
-                    <a class="position-relative d-block h-100 overflow-hidden" href="https://www.thalesgroup.com/en/worldwide-digital-identity-and-security/iot/magazine/singapore-worlds-smartest-city" target="_blank">
-                        <img class="img-fluid position-absolute w-100 h-100" src="img/Singapur.jpg" alt="" style="object-fit: cover;">
-                        <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin:  1px;">
-                            <h5 class="m-0">Сінґапур</h5>
-                            <small class="text-primary">Сінґапур</small>
-                        </div>
+            </div>
+        </div>
+        <!-- Team End -->
+
+        <!-- Footer Start -->
+        <div
+            class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn"
+            data-wow-delay="0.1s"
+        >
+            <div class="container py-5">
+                <div class="row g-5 footer-menu-2">
+                    <div class="col-lg-3 col-md-6">
+                        <h4 class="text-white mb-3">Навігація</h4>
+                        <a class="btn btn-link" href="#carousel"
+                            >Головна сторінка</a
+                        >
+                        <a class="btn btn-link" href="#service"
+                            >Характеристика</a
+                        >
+                        <a class="btn btn-link" href="#about">Про нас</a>
+                        <a class="btn btn-link" href="#technology"
+                            >Розумні технологій</a
+                        >
+                        <a class="btn btn-link" href="#cities">Розумні міста</a>
+                        <a class="btn btn-link" href="#cources">Курси</a>
+                        <a class="btn btn-link" href="#team">Команда</a>
+                    </div>
+                    <a href="index.html" class="navbar-brand logo-footer">
+                        <h2 class="m-0 text-primary">
+                            <i class="fa fa-book me-3"></i>ecOSmart
+                        </h2>
                     </a>
                 </div>
             </div>
-        </div>
-    </div>
-    <!-- Categories Start -->
-
-
-    <!-- Courses Start -->
-    <div class="container-xxl py-5" id="cources">
-        <div class="container">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Courses</h6>
-                <h1>Вивчай розумні міста</h1>
-                <h4 class="mb-5">Онлайн курси</h4>
-            </div>
-            <div class="row g-4 justify-content-center">
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="course-item bg-light">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid" src="img/course-1.jpg" alt="">
-                            <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
-                                <a href="https://www.coursera.org/learn/digital-democracy#syllabus" target="_blank" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
-                                <a href="https://www.coursera.org/learn/digital-democracy#syllabus" target="_blank" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Join Now</a>
+            <div class="container">
+                <div class="copyright">
+                    <div>
+                        <div class="text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="index.html">Home</a>
+                                <a href="energy.html">Зелена енергетика</a>
+                                <a href="health.html">Електронне здоров'я</a>
+                                <a href="transport.html">Розумний транспорт</a>
+                                <a href="buildings.html">Розумні будівлі</a>
+                                <a href="security.html"
+                                    >Безпека і приватність</a
+                                >
+                                <a href="contact.html">Електронне урядування</a>
                             </div>
-                        </div>
-                        <div class="do-flex">
-                        <div class="text-center p-4 pb-0">
-                            <h3 class="mb-0">$0.00</h3>
-                            <div class="mb-3">
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small>(123)</small>
-                            </div>
-                            <h5 class="mb-4">Securing Digital Democracy</h5>
-                        </div>
-                        <div class="d-flex border-top">
-                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>Unaversity of Michigan</small>
-                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>14 Hrs</small>
-
-                        </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="course-item bg-light">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid" src="img/course-2.jpg" alt="">
-                            <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
-                                <a href="https://www.coursera.org/learn/reclaiming-the-street" target="_blank" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
-                                <a href="https://www.coursera.org/learn/reclaiming-the-street" target="_blank" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Join Now</a>
-                            </div>
-                        </div>
-                        <div class="do-flex">
-                        <div class="text-center p-4 pb-0">
-                            <h3 class="mb-0">$0.00</h3>
-                            <div class="mb-3">
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small>(123)</small>
-                            </div>
-                            <h5 class="mb-4">Reclaiming the Street for Livable Urban Spaces</h5>
-                        </div>
-                        <div class="d-flex border-top">
-                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>University of Amsterdam</small>
-                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>19 Hrs</small>
-
-                        </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="course-item bg-light">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid" src="img/course-3.jpg" alt="">
-                            <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
-                                <a href="https://www.coursera.org/learn/renewable-energy-entrepreneurship#syllabus" target="_blank" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
-                                <a href="https://www.coursera.org/learn/renewable-energy-entrepreneurship#syllabus" target="_blank" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Join Now</a>
-                            </div>
-                        </div>
-                        <div class="do-flex">
-                        <div class="text-center p-4 pb-0">
-                            <h3 class="mb-0">$0.00</h3>
-                            <div class="mb-3">
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small>(123)</small>
-                            </div>
-                            <h5 class="mb-4">Renewable Energy and Green Building Entrepreneurship</h5>
-                        </div>
-                        <div class="d-flex border-top">
-                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>Duke University</small>
-                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>17 Hrs</small>
-
-                        </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Courses End -->
+        <!-- Footer End -->
 
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
+            ><i class="bi bi-arrow-up"></i
+        ></a>
 
-    <!-- Team Start -->
-    <div class="container-xxl py-5" id="team">
-        <div class="container">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Team</h6>
-                <h1 class="mb-5">Розробники</h1>
-            </div>
-            <div class="row g-4 dev">
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="team-item bg-light">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/oksana.jpg" alt="">
-                        </div>
-                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                                <a class="btn btn-sm-square btn-primary mx-1" href="https://www.instagram.com/oksana.hordych/" target="_blank">
-                                     <span><img src="./img/instagram.png" alt="" width="25"></span>
-                                </a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href="https://github.com/sana23ok" target="_blank">
-                                    <span><img src="./img/github.png" alt="" width="25"></span>
-                                </a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href="https://www.linkedin.com/in/oksana-hordych-7380ba290/" target="_blank">
-                                    <span><img src="./img/linkedin.png" alt="" width="25"></span>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-0">Гордич Оксана</h5>
-                            <small>Розробник</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="team-item bg-light">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/dima.jpg" alt="">
-                        </div>
-                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                                <a class="btn btn-sm-square btn-primary mx-1" href="https://www.instagram.com/dima.holiaka/" target="_blank">
-                                    <span><img src="./img/instagram.png" alt="" width="25"></span>
-                                </a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href="https://github.com/HoliakaDmytro" target="_blank">
-                                    <span><img src="./img/github.png" alt="" width="25"></span>
-                                </a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href="https://github.com/HoliakaDmytro" target="_blank">
-                                    <span><img src="./img/linkedin.png" alt="" width="25"></span>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-0">Голяка Дмитро</h5>
-                            <small>Розробник</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="team-item bg-light">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/sofiia.jpg" alt="">
-                        </div>
-                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                                <a class="btn btn-sm-square btn-primary mx-1" href="https://www.instagram.com/sofiiakovall/" target="_blank">
-                                    <span><img src="./img/instagram.png" alt="" width="25"></span>
-                                </a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href="https://github.com/kovalsofiia1" target="_blank">
-                                    <span><img src="./img/github.png" alt="" width="25"></span>
-                                </a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href="https://www.linkedin.com/in/sofiia-koval-19151b296/" target="_blank">
-                                    <span><img src="./img/linkedin.png" alt="" width="25"></span>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-0">Коваль Софія</h5>
-                            <small>Розробник</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Team End -->
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
-
-
-
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="row g-5 footer-menu-2">
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Навігація</h4>
-                    <a class="btn btn-link" href="#carousel">Головна сторінка</a>
-                    <a class="btn btn-link" href="#service">Характеристика</a>
-                    <a class="btn btn-link" href="#about">Про нас</a>
-                    <a class="btn btn-link" href="#technology">Розумні технологій</a>
-                    <a class="btn btn-link" href="#cities">Розумні міста</a>
-                    <a class="btn btn-link" href="#cources">Курси</a>
-                    <a class="btn btn-link" href="#team">Команда</a>
-
-                </div>
-                <a href="index.html" class="navbar-brand logo-footer">
-                    <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>ecOSmart</h2>
-                </a>
-            </div>
-        </div>
-        <div class="container">
-            <div class="copyright">
-                <div >
-
-                    <div class="text-center text-md-end">
-                        <div class="footer-menu">
-                            <a href="index.html">Home</a>
-                            <a href="energy.html">Зелена енергетика</a>
-                            <a href="health.html">Електронне здоров'я</a>
-                            <a href="transport.html">Розумний транспорт</a>
-                            <a href="buildings.html">Розумні будівлі</a>
-                            <a href="security.html">Безпека і приватність</a>
-                            <a href="contact.html">Електронне урядування</a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Footer End -->
-
-
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
-
-
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
-</body>
-
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+    </body>
 </html>

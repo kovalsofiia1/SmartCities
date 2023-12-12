@@ -1,194 +1,306 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>ecOSmart</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <meta content="" name="keywords" />
+        <meta content="" name="description" />
 
-<head>
-    <meta charset="utf-8">
-    <title>ecOSmart</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon" />
 
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
+            rel="stylesheet"
+        />
 
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+        <!-- Icon Font Stylesheet -->
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+            rel="stylesheet"
+        />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+            rel="stylesheet"
+        />
 
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+        <!-- Libraries Stylesheet -->
+        <link href="lib/animate/animate.min.css" rel="stylesheet" />
+        <link
+            href="lib/owlcarousel/assets/owl.carousel.min.css"
+            rel="stylesheet"
+        />
 
-    <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet" />
 
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet" />
 
-    <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
-</head>
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="img/favicon/apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="img/favicon/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="img/favicon/favicon-16x16.png"
+        />
+        <link rel="manifest" href="img/favicon/site.webmanifest" />
+    </head>
 
-<body>
-    <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
-    </div>
-    <!-- Spinner End -->
-
-
-    <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
-        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>ecOSmart</h2>
-        </a>
-        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link active">Home</a>
-
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                    <div class="dropdown-menu fade-down m-0">
-                        <a href="energy.html" class="dropdown-item">Зелена енергетика</a>
-                        <a href="health.html" class="dropdown-item">Електронне здоров'я</a>
-                        <a href="transport.html" class="dropdown-item">Розумний транспорт</a>
-                        <a href="buildings.html" class="dropdown-item">Розумні будівлі</a>
-                        <a href="security.html" class="dropdown-item">Безпека і приватність</a>
-                        <a href="contact.html" class="dropdown-item">Електронне урядування</a>
-                    </div>
-                </div>
-
-            </div>
-            <a href="contact.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Next page<i class="fa fa-arrow-right ms-3"></i></a>
-        </div>
-    </nav>
-    <!-- Navbar End -->
-
-
-    <!-- Header Start -->
-    <div class="container-fluid bg-primary py-5 mb-5 page-header-security">
-        <div class="container py-5">
-            <div class="row justify-content-center">
-                <div class="col-lg-10 text-center">
-                    <h1 class="display-3 text-white animated slideInDown">Безпека і приватність</h1>
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb justify-content-center">
-                            <li class="breadcrumb-item"><a class="text-white" href="index.html">Home</a></li>
-                        </ol>
-                    </nav>
-                </div>
+    <body>
+        <!-- Spinner Start -->
+        <div
+            id="spinner"
+            class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+        >
+            <div
+                class="spinner-border text-primary"
+                style="width: 3rem; height: 3rem"
+                role="status"
+            >
+                <span class="sr-only">Loading...</span>
             </div>
         </div>
-    </div>
-    <!-- Header End -->
+        <!-- Spinner End -->
 
-    <!-- Testimonial Start -->
-    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container" style="font-size: 20px">
-            <h1 class="animated slideInDown">Безпека і приватність у розумному місті -
-            це важлива тема, яка стосується того, як технології можуть допомогти
-            забезпечити безпечне життя та захист інформації мешканців міст. Розумне
-            місто - це система, яка використовує інформаційні та комунікаційні
-            технології для покращення якості життя, ефективності управління, економіки
-            та екології.</h1>
-        </div>
-
-        <div class="container" style="font-size: 20px">
-            <h1 class="display-3 text-white animated slideInDown">Аспекти безпеки в розумних містах:</h1>
-            <ul>
-                <li>
-                    <strong>Кібербезпека систем:</strong>
-                    З уведенням розумних технологій у міста, виникає важлива задача забезпечення кібербезпеки систем. Це включає заходи для захисту від хакерських атак та конфіденційності зібраних даних.
-                </li>
-                <li>
-                    <strong>Мережева безпека:</strong>
-                    Інтеграція розумних систем часто включає в себе велику кількість підключених пристроїв та датчиків. Забезпечення безпеки цих мереж, від захисту від несанкціонованого доступу до захисту від перешкоджань у роботі мережі, стає ключовим завданням.
-                </li>
-                <li>
-                    <strong>Захист даних користувачів:</strong>
-                    Збір та аналіз великої кількості даних в реальному часі створює проблеми з охороною приватності громадян. Важливо встановлювати прозорі правила та заходи для захисту особистої інформації.
-                </li>
-                <li>
-                    <strong>Фізична безпека:</strong>
-                    Розумні міста включають системи відеоспостереження, датчики безпеки та системи виявлення небезпек. Забезпечення захисту фізичної інфраструктури та громадян є ключовим аспектом.
-                </li>
-                <li>
-                    <strong>Етика та нормативи:</strong>
-                    Важливо встановлювати етичні стандарти та нормативи для використання технологій у розумних містах. Це включає в себе визначення меж експлуатації даних, відповідального використання штучного інтелекту, та інші етичні питання.
-                </li>
-                <li>
-                    <strong>Системи екстреної відповіді:</strong>
-                    Розумні міста повинні мати ефективні системи екстреної відповіді, які можуть швидко реагувати на будь-які загрози безпеки, будь то природні катастрофи чи кібератаки.
-                </li>
-                <li>
-                    <strong>Залучення громадськості:</strong>
-                    Важливо включати громадськість у процес розробки та впровадження розумних технологій. Громадськість повинна мати можливість висловлювати свої обгрунтовані думки щодо питань безпеки та приватності.
-                </li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div style="display:flex; align-items: center; justify-content: center;">
-            <img src="img/pexels-henry-marsh-58625.jpg" alt="img" style="width:85%">
-        </div>
-    </div>
-
-
-
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-5">
-
-            <a href="index.html" class="navbar-brand logo-footer">
-                <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>ecOSmart</h2>
+        <!-- Navbar Start -->
+        <nav
+            class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0"
+        >
+            <a
+                href="index.html"
+                class="navbar-brand d-flex align-items-center px-4 px-lg-5"
+            >
+                <h2 class="m-0 text-primary">
+                    <i class="fa fa-book me-3"></i>ecOSmart
+                </h2>
             </a>
+            <button
+                type="button"
+                class="navbar-toggler me-4"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarCollapse"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto p-4 p-lg-0">
+                    <a href="index.html" class="nav-item nav-link active"
+                        >Home</a
+                    >
 
-        </div>
-        <div class="container">
-            <div class="copyright">
-                <div >
-
-                    <div class="text-center text-md-end">
-                        <div class="footer-menu">
-                            <a href="index.html">Home</a>
-                            <a href="energy.html">Зелена енергетика</a>
-                            <a href="health.html">Електронне здоров'я</a>
-                            <a href="transport.html">Розумний транспорт</a>
-                            <a href="buildings.html">Розумні будівлі</a>
-                            <a href="security.html">Безпека і приватність</a>
-                            <a href="contact.html">Електронне урядування</a>
+                    <div class="nav-item dropdown">
+                        <a
+                            href="#"
+                            class="nav-link dropdown-toggle"
+                            data-bs-toggle="dropdown"
+                            >Pages</a
+                        >
+                        <div class="dropdown-menu fade-down m-0">
+                            <a href="energy.html" class="dropdown-item"
+                                >Зелена енергетика</a
+                            >
+                            <a href="health.html" class="dropdown-item"
+                                >Електронне здоров'я</a
+                            >
+                            <a href="transport.html" class="dropdown-item"
+                                >Розумний транспорт</a
+                            >
+                            <a href="buildings.html" class="dropdown-item"
+                                >Розумні будівлі</a
+                            >
+                            <a href="security.html" class="dropdown-item"
+                                >Безпека і приватність</a
+                            >
+                            <a href="contact.html" class="dropdown-item"
+                                >Електронне урядування</a
+                            >
                         </div>
                     </div>
+                </div>
+                <a
+                    href="contact.html"
+                    class="btn btn-primary py-4 px-lg-5 d-none d-lg-block"
+                    >Next page<i class="fa fa-arrow-right ms-3"></i
+                ></a>
+            </div>
+        </nav>
+        <!-- Navbar End -->
 
+        <!-- Header Start -->
+        <div class="container-fluid bg-primary py-5 mb-5 page-header-security">
+            <div class="container py-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10 text-center">
+                        <h1 class="display-3 text-white animated slideInDown">
+                            Безпека і приватність
+                        </h1>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb justify-content-center">
+                                <li class="breadcrumb-item">
+                                    <a class="text-white" href="index.html"
+                                        >Home</a
+                                    >
+                                </li>
+                            </ol>
+                        </nav>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Footer End -->
+        <!-- Header End -->
 
+        <!-- Testimonial Start -->
+        <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container" style="font-size: 20px">
+                <h1 class="animated slideInDown">
+                    Безпека і приватність у розумному місті - це важлива тема,
+                    яка стосується того, як технології можуть допомогти
+                    забезпечити безпечне життя та захист інформації мешканців
+                    міст. Розумне місто - це система, яка використовує
+                    інформаційні та комунікаційні технології для покращення
+                    якості життя, ефективності управління, економіки та
+                    екології.
+                </h1>
+            </div>
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+            <div class="container" style="font-size: 20px">
+                <h1 class="display-3 text-white animated slideInDown">
+                    Аспекти безпеки в розумних містах:
+                </h1>
+                <ul>
+                    <li>
+                        <strong>Кібербезпека систем:</strong>
+                        З уведенням розумних технологій у міста, виникає важлива
+                        задача забезпечення кібербезпеки систем. Це включає
+                        заходи для захисту від хакерських атак та
+                        конфіденційності зібраних даних.
+                    </li>
+                    <li>
+                        <strong>Мережева безпека:</strong>
+                        Інтеграція розумних систем часто включає в себе велику
+                        кількість підключених пристроїв та датчиків.
+                        Забезпечення безпеки цих мереж, від захисту від
+                        несанкціонованого доступу до захисту від перешкоджань у
+                        роботі мережі, стає ключовим завданням.
+                    </li>
+                    <li>
+                        <strong>Захист даних користувачів:</strong>
+                        Збір та аналіз великої кількості даних в реальному часі
+                        створює проблеми з охороною приватності громадян.
+                        Важливо встановлювати прозорі правила та заходи для
+                        захисту особистої інформації.
+                    </li>
+                    <li>
+                        <strong>Фізична безпека:</strong>
+                        Розумні міста включають системи відеоспостереження,
+                        датчики безпеки та системи виявлення небезпек.
+                        Забезпечення захисту фізичної інфраструктури та громадян
+                        є ключовим аспектом.
+                    </li>
+                    <li>
+                        <strong>Етика та нормативи:</strong>
+                        Важливо встановлювати етичні стандарти та нормативи для
+                        використання технологій у розумних містах. Це включає в
+                        себе визначення меж експлуатації даних, відповідального
+                        використання штучного інтелекту, та інші етичні питання.
+                    </li>
+                    <li>
+                        <strong>Системи екстреної відповіді:</strong>
+                        Розумні міста повинні мати ефективні системи екстреної
+                        відповіді, які можуть швидко реагувати на будь-які
+                        загрози безпеки, будь то природні катастрофи чи
+                        кібератаки.
+                    </li>
+                    <li>
+                        <strong>Залучення громадськості:</strong>
+                        Важливо включати громадськість у процес розробки та
+                        впровадження розумних технологій. Громадськість повинна
+                        мати можливість висловлювати свої обгрунтовані думки
+                        щодо питань безпеки та приватності.
+                    </li>
+                </ul>
+            </div>
+        </div>
 
+        <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div
+                style="
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                "
+            >
+                <img
+                    src="img/pexels-henry-marsh-58625.jpg"
+                    alt="img"
+                    style="width: 85%"
+                />
+            </div>
+        </div>
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <!-- Footer Start -->
+        <div
+            class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn"
+            data-wow-delay="0.1s"
+        >
+            <div class="container py-5">
+                <a href="index.html" class="navbar-brand logo-footer">
+                    <h2 class="m-0 text-primary">
+                        <i class="fa fa-book me-3"></i>ecOSmart
+                    </h2>
+                </a>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    <div>
+                        <div class="text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="index.html">Home</a>
+                                <a href="energy.html">Зелена енергетика</a>
+                                <a href="health.html">Електронне здоров'я</a>
+                                <a href="transport.html">Розумний транспорт</a>
+                                <a href="buildings.html">Розумні будівлі</a>
+                                <a href="security.html"
+                                    >Безпека і приватність</a
+                                >
+                                <a href="contact.html">Електронне урядування</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
-</body>
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
+            ><i class="bi bi-arrow-up"></i
+        ></a>
 
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+    </body>
 </html>

@@ -1,230 +1,381 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>ecOSmart</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <meta content="" name="keywords" />
+        <meta content="" name="description" />
 
-<head>
-    <meta charset="utf-8">
-    <title>ecOSmart</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon" />
 
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
+            rel="stylesheet"
+        />
 
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+        <!-- Icon Font Stylesheet -->
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+            rel="stylesheet"
+        />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+            rel="stylesheet"
+        />
 
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+        <!-- Libraries Stylesheet -->
+        <link href="lib/animate/animate.min.css" rel="stylesheet" />
+        <link
+            href="lib/owlcarousel/assets/owl.carousel.min.css"
+            rel="stylesheet"
+        />
 
-    <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet" />
 
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet" />
 
-    <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
-</head>
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="img/favicon/apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="img/favicon/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="img/favicon/favicon-16x16.png"
+        />
+        <link rel="manifest" href="img/favicon/site.webmanifest" />
+    </head>
 
-<body>
-    <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
-    </div>
-    <!-- Spinner End -->
-
-
-    <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
-        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>ecOSmart</h2>
-        </a>
-        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link active">Home</a>
-
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                    <div class="dropdown-menu fade-down m-0">
-                        <a href="energy.html" class="dropdown-item">Зелена енергетика</a>
-                        <a href="health.html" class="dropdown-item">Електронне здоров'я</a>
-                        <a href="transport.html" class="dropdown-item">Розумний транспорт</a>
-                        <a href="buildings.html" class="dropdown-item">Розумні будівлі</a>
-                        <a href="security.html" class="dropdown-item">Безпека і приватність</a>
-                        <a href="contact.html" class="dropdown-item">Електронне урядування</a>
-                    </div>
-                </div>
-
-            </div>
-            <a href="index.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Next page<i class="fa fa-arrow-right ms-3"></i></a>
-        </div>
-    </nav>
-    <!-- Navbar End -->
-
-
-    <!-- Header Start -->
-    <div class="container-fluid bg-primary py-5 mb-5 page-header page-header-gov">
-        <div class="container py-5">
-            <div class="row justify-content-center">
-                <div class="col-lg-10 text-center">
-                    <h1 class="display-3 text-white animated slideInDown">Електронне урядування</h1>
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb justify-content-center">
-                            <li class="breadcrumb-item"><a class="text-white" href="index.html">Home</a></li>
-                        </ol>
-                    </nav>
-                </div>
+    <body>
+        <!-- Spinner Start -->
+        <div
+            id="spinner"
+            class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+        >
+            <div
+                class="spinner-border text-primary"
+                style="width: 3rem; height: 3rem"
+                role="status"
+            >
+                <span class="sr-only">Loading...</span>
             </div>
         </div>
-    </div>
-    <!-- Header End -->
+        <!-- Spinner End -->
 
-
-    <!-- Contact Start -->
-    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s" id="technology">
-        <div class="container" style="font-size: 20px; margin-bottom: 60px;">
-            Електронне урядування в концепції розумного міста (Smart City)
-            відіграє ключову роль у вдосконаленні та оптимізації адміністративних
-            процесів з метою забезпечення зручності та ефективності для мешканців.
-            У цьому контексті електронне урядування використовує сучасні технології
-            для полегшення взаємодії між владою, громадянами та підприємствами.
-
-        </div>
-
-        <div class="container">
-            <div class="text-center">
-                <h6 class="section-title bg-white text-center text-primary px-3">Technologies</h6>
-                <h1 class="mb-5">Проекти розвитку</h1>
-            </div>
-            <div class="owl-carousel testimonial-carousel position-relative">
-                <div class="testimonial-item text-center">
-                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/gov-1.png" style="width: 80px; height: 80px;">
-                    <h5 class="mb-4">Електронні сервіси для громадян</h5>
-
-                    <div class="testimonial-text bg-light text-center p-4">
-                        <p class="mb-0">Розумне місто надає громадянам можливість звертатися за допомогою до
-                            міських служб та отримувати різноманітні послуги в онлайн-режимі. Це може стосуватися
-                            оплати комунальних послуг, реєстрації подій,
-                            отримання інформації про громадський транспорт та багато іншого.</p>
-                    </div>
-                </div>
-                <div class="testimonial-item text-center">
-                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/gov-3.png" style="width: 80px; height: 80px;">
-                    <h5 class="mb-4">Електронні системи моніторингу та управління інфраструктурою</h5>
-
-                    <div class="testimonial-text bg-light text-center p-4">
-                        <p class="mb-0">Розумне місто використовує датчики та системи моніторингу для збору
-                            даних щодо стану інфраструктури, такої як дороги, освітлення, водопостачання та інше.
-                            Ці дані можуть використовуватися
-                            для автоматизації управління цими системами та швидкого реагування на проблеми.</p>
-                    </div>
-                </div>
-                <div class="testimonial-item text-center">
-                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/gov-2.png" style="width: 80px; height: 80px;">
-                    <h5 class="mb-4">Електронні системи управління транспортом</h5>
-
-                    <div class="testimonial-text bg-light text-center p-4">
-                        <p class="mb-0">Використання технологій для оптимізації руху транспорту, включаючи
-                            системи контролю за трафіком, електронні білетні та системи спільного
-                            використання автомобілів, що сприяє зменшенню заторів та забрудненню повітря.</p>
-                    </div>
-                </div>
-                <div class="testimonial-item text-center">
-                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/gov-4.png" style="width: 80px; height: 80px;">
-                    <h5 class="mb-4">Електронна ідентифікація та безпека</h5>
-
-                    <div class="testimonial-text bg-light text-center p-4">
-                        <p class="mb-0"> Впровадження сучасних систем ідентифікації, таких як
-                            біометричні технології, для забезпечення безпеки мешканців та гостей міста.
-                            Це може включати контроль доступу до публічних
-                            місць, відеоспостереження та системи екстреного реагування.</p>
-                    </div>
-                </div>
-                <div class="testimonial-item text-center">
-                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/gov-2.png" style="width: 80px; height: 80px;">
-                    <h5 class="mb-4">Електронна партисипація громадян</h5>
-
-                    <div class="testimonial-text bg-light text-center p-4">
-                        <p class="mb-0">Забезпечення можливості громадян брати активну участь у
-                            прийнятті рішень через електронні платформи.
-                            Це може включати онлайн-голосування, платформи для збору відгуків та ідей громади.</p>
-                    </div>
-                </div>
-                <div class="testimonial-item text-center">
-                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/gov-6.png" style="width: 80px; height: 80px;">
-                    <h5 class="mb-4">Аналіз даних для прийняття рішень</h5>
-
-                    <div class="testimonial-text bg-light text-center p-4">
-                        <p class="mb-0">Використання аналітичних інструментів для обробки великих
-                            обсягів даних, зібраних в розумному місті. Це допомагає місту приймати
-                            обґрунтовані рішення щодо розвитку та управління ресурсами.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="container" style="font-size: 20px; margin-bottom: 60px; margin-top: 60px;">
-                Електронне урядування в розумному місті сприяє покращенню якості життя громадян, оптимізації
-                управління містом та зниженню негативного впливу на довкілля.
-
-            </div>
-        </div>
-    </div>
-    <!-- Contact End -->
-
-
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <a href="index.html" class="navbar-brand logo-footer">
-                <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>ecOSmart</h2>
+        <!-- Navbar Start -->
+        <nav
+            class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0"
+        >
+            <a
+                href="index.html"
+                class="navbar-brand d-flex align-items-center px-4 px-lg-5"
+            >
+                <h2 class="m-0 text-primary">
+                    <i class="fa fa-book me-3"></i>ecOSmart
+                </h2>
             </a>
-        </div>
-        <div class="container">
-            <div class="copyright">
-                <div >
+            <button
+                type="button"
+                class="navbar-toggler me-4"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarCollapse"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto p-4 p-lg-0">
+                    <a href="index.html" class="nav-item nav-link active"
+                        >Home</a
+                    >
 
-                    <div class="text-center text-md-end">
-                        <div class="footer-menu">
-                            <a href="index.html">Home</a>
-                            <a href="energy.html">Зелена енергетика</a>
-                            <a href="health.html">Електронне здоров'я</a>
-                            <a href="transport.html">Розумний транспорт</a>
-                            <a href="buildings.html">Розумні будівлі</a>
-                            <a href="security.html">Безпека і приватність</a>
-                            <a href="contact.html">Електронне урядування</a>
+                    <div class="nav-item dropdown">
+                        <a
+                            href="#"
+                            class="nav-link dropdown-toggle"
+                            data-bs-toggle="dropdown"
+                            >Pages</a
+                        >
+                        <div class="dropdown-menu fade-down m-0">
+                            <a href="energy.html" class="dropdown-item"
+                                >Зелена енергетика</a
+                            >
+                            <a href="health.html" class="dropdown-item"
+                                >Електронне здоров'я</a
+                            >
+                            <a href="transport.html" class="dropdown-item"
+                                >Розумний транспорт</a
+                            >
+                            <a href="buildings.html" class="dropdown-item"
+                                >Розумні будівлі</a
+                            >
+                            <a href="security.html" class="dropdown-item"
+                                >Безпека і приватність</a
+                            >
+                            <a href="contact.html" class="dropdown-item"
+                                >Електронне урядування</a
+                            >
                         </div>
                     </div>
+                </div>
+                <a
+                    href="index.html"
+                    class="btn btn-primary py-4 px-lg-5 d-none d-lg-block"
+                    >Next page<i class="fa fa-arrow-right ms-3"></i
+                ></a>
+            </div>
+        </nav>
+        <!-- Navbar End -->
 
+        <!-- Header Start -->
+        <div
+            class="container-fluid bg-primary py-5 mb-5 page-header page-header-gov"
+        >
+            <div class="container py-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10 text-center">
+                        <h1 class="display-3 text-white animated slideInDown">
+                            Електронне урядування
+                        </h1>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb justify-content-center">
+                                <li class="breadcrumb-item">
+                                    <a class="text-white" href="index.html"
+                                        >Home</a
+                                    >
+                                </li>
+                            </ol>
+                        </nav>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Footer End -->
+        <!-- Header End -->
 
+        <!-- Contact Start -->
+        <div
+            class="container-xxl py-5 wow fadeInUp"
+            data-wow-delay="0.1s"
+            id="technology"
+        >
+            <div class="container" style="font-size: 20px; margin-bottom: 60px">
+                Електронне урядування в концепції розумного міста (Smart City)
+                відіграє ключову роль у вдосконаленні та оптимізації
+                адміністративних процесів з метою забезпечення зручності та
+                ефективності для мешканців. У цьому контексті електронне
+                урядування використовує сучасні технології для полегшення
+                взаємодії між владою, громадянами та підприємствами.
+            </div>
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+            <div class="container">
+                <div class="text-center">
+                    <h6
+                        class="section-title bg-white text-center text-primary px-3"
+                    >
+                        Technologies
+                    </h6>
+                    <h1 class="mb-5">Проекти розвитку</h1>
+                </div>
+                <div
+                    class="owl-carousel testimonial-carousel position-relative"
+                >
+                    <div class="testimonial-item text-center">
+                        <img
+                            class="border rounded-circle p-2 mx-auto mb-3"
+                            src="img/gov-1.png"
+                            style="width: 80px; height: 80px"
+                        />
+                        <h5 class="mb-4">Електронні сервіси для громадян</h5>
 
+                        <div class="testimonial-text bg-light text-center p-4">
+                            <p class="mb-0">
+                                Розумне місто надає громадянам можливість
+                                звертатися за допомогою до міських служб та
+                                отримувати різноманітні послуги в онлайн-режимі.
+                                Це може стосуватися оплати комунальних послуг,
+                                реєстрації подій, отримання інформації про
+                                громадський транспорт та багато іншого.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="testimonial-item text-center">
+                        <img
+                            class="border rounded-circle p-2 mx-auto mb-3"
+                            src="img/gov-3.png"
+                            style="width: 80px; height: 80px"
+                        />
+                        <h5 class="mb-4">
+                            Електронні системи моніторингу та управління
+                            інфраструктурою
+                        </h5>
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+                        <div class="testimonial-text bg-light text-center p-4">
+                            <p class="mb-0">
+                                Розумне місто використовує датчики та системи
+                                моніторингу для збору даних щодо стану
+                                інфраструктури, такої як дороги, освітлення,
+                                водопостачання та інше. Ці дані можуть
+                                використовуватися для автоматизації управління
+                                цими системами та швидкого реагування на
+                                проблеми.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="testimonial-item text-center">
+                        <img
+                            class="border rounded-circle p-2 mx-auto mb-3"
+                            src="img/gov-2.png"
+                            style="width: 80px; height: 80px"
+                        />
+                        <h5 class="mb-4">
+                            Електронні системи управління транспортом
+                        </h5>
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
-</body>
+                        <div class="testimonial-text bg-light text-center p-4">
+                            <p class="mb-0">
+                                Використання технологій для оптимізації руху
+                                транспорту, включаючи системи контролю за
+                                трафіком, електронні білетні та системи
+                                спільного використання автомобілів, що сприяє
+                                зменшенню заторів та забрудненню повітря.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="testimonial-item text-center">
+                        <img
+                            class="border rounded-circle p-2 mx-auto mb-3"
+                            src="img/gov-4.png"
+                            style="width: 80px; height: 80px"
+                        />
+                        <h5 class="mb-4">
+                            Електронна ідентифікація та безпека
+                        </h5>
 
+                        <div class="testimonial-text bg-light text-center p-4">
+                            <p class="mb-0">
+                                Впровадження сучасних систем ідентифікації,
+                                таких як біометричні технології, для
+                                забезпечення безпеки мешканців та гостей міста.
+                                Це може включати контроль доступу до публічних
+                                місць, відеоспостереження та системи екстреного
+                                реагування.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="testimonial-item text-center">
+                        <img
+                            class="border rounded-circle p-2 mx-auto mb-3"
+                            src="img/gov-2.png"
+                            style="width: 80px; height: 80px"
+                        />
+                        <h5 class="mb-4">Електронна партисипація громадян</h5>
+
+                        <div class="testimonial-text bg-light text-center p-4">
+                            <p class="mb-0">
+                                Забезпечення можливості громадян брати активну
+                                участь у прийнятті рішень через електронні
+                                платформи. Це може включати онлайн-голосування,
+                                платформи для збору відгуків та ідей громади.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="testimonial-item text-center">
+                        <img
+                            class="border rounded-circle p-2 mx-auto mb-3"
+                            src="img/gov-6.png"
+                            style="width: 80px; height: 80px"
+                        />
+                        <h5 class="mb-4">Аналіз даних для прийняття рішень</h5>
+
+                        <div class="testimonial-text bg-light text-center p-4">
+                            <p class="mb-0">
+                                Використання аналітичних інструментів для
+                                обробки великих обсягів даних, зібраних в
+                                розумному місті. Це допомагає місту приймати
+                                обґрунтовані рішення щодо розвитку та управління
+                                ресурсами.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="container"
+                    style="
+                        font-size: 20px;
+                        margin-bottom: 60px;
+                        margin-top: 60px;
+                    "
+                >
+                    Електронне урядування в розумному місті сприяє покращенню
+                    якості життя громадян, оптимізації управління містом та
+                    зниженню негативного впливу на довкілля.
+                </div>
+            </div>
+        </div>
+        <!-- Contact End -->
+
+        <!-- Footer Start -->
+        <div
+            class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn"
+            data-wow-delay="0.1s"
+        >
+            <div class="container py-5">
+                <a href="index.html" class="navbar-brand logo-footer">
+                    <h2 class="m-0 text-primary">
+                        <i class="fa fa-book me-3"></i>ecOSmart
+                    </h2>
+                </a>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    <div>
+                        <div class="text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="index.html">Home</a>
+                                <a href="energy.html">Зелена енергетика</a>
+                                <a href="health.html">Електронне здоров'я</a>
+                                <a href="transport.html">Розумний транспорт</a>
+                                <a href="buildings.html">Розумні будівлі</a>
+                                <a href="security.html"
+                                    >Безпека і приватність</a
+                                >
+                                <a href="contact.html">Електронне урядування</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
+            ><i class="bi bi-arrow-up"></i
+        ></a>
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+    </body>
 </html>
