@@ -1,9 +1,8 @@
 # ecOSmart Project
 
 ## WebSite Link
-``` bash
-	http://ecosmart.kesug.com/
-```
+[Google](http://ecosmart.kesug.com/)
+
 
 ## Overview
 The ecOSmart project is developed as part of the "Smart Cities" course, aimed at presenting the concept of smart cities through an informative and interactive web platform. This site delves into smart technologies, offering insights into the benefits and challenges associated with smart cities, as well as their impact on the environment. Additionally, ecOSmart facilitates the purchase of online courses related to smart city topics.
