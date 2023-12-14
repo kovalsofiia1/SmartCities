@@ -1,7 +1,8 @@
 # ecOSmart Project
 
 ## WebSite Link
-[Google](http://ecosmart.kesug.com/)
+
+[ecOSmart](http://ecosmart.kesug.com/)
 
 
 ## Overview
